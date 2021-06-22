@@ -182,7 +182,7 @@ export default (ins: Feed) => {
     }
 
     if (entry.image) {
-      item.enclosure = formatEnclosure(entry.image, "image");
+      item["media:content"] = formatMedia(entry.image, "image");
     }
 
     if (entry.audio) {
@@ -205,6 +205,21 @@ export default (ins: Feed) => {
     base.rss._attributes["xmlns:atom"] = "http://www.w3.org/2005/Atom";
   }
   return convert.js2xml(base, { compact: true, ignoreComment: true, spaces: 4 });
+};
+
+/**
+ * Returns a formated media
+ * @param enclosure
+ * @param mimeCategory
+ */
+const formatMedia = (enclosure: string | Enclosure, mimeCategory = "image") => {
+  if (typeof enclosure === "string") {
+    const type = new URL(enclosure).pathname.split(".").slice(-1)[0];
+    return { _attributes: { url: enclosure, length: 0, type: `${mimeCategory}/${type}` } };
+  }
+
+  const type = new URL(enclosure.url).pathname.split(".").slice(-1)[0];
+  return { _attributes: { length: 0, type: `${mimeCategory}/${type}`, ...enclosure } };
 };
 
 /**

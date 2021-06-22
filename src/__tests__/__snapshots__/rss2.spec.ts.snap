@@ -31,7 +31,8 @@ exports[`rss 2.0 should generate a valid feed 1`] = `
             <author>joesmith@example.com (Joe Smith)</author>
             <category>Grateful Dead</category>
             <category domain=\\"http://www.fool.com/cusips\\">MSFT</category>
-            <enclosure url=\\"https://example.com/hello-world.jpg\\" length=\\"0\\" type=\\"image/jpg\\"/>
+            <enclosure length=\\"12665\\" type=\\"image/jpeg\\" url=\\"https://example.com/hello-world.jpg\\"/>
+            <media:content url=\\"https://example.com/hello-world.jpg\\" length=\\"0\\" type=\\"image/jpg\\"/>
         </item>
     </channel>
 </rss>"
@@ -68,7 +69,8 @@ exports[`rss 2.0 should generate a valid feed with audio 1`] = `
             <author>joesmith@example.com (Joe Smith)</author>
             <category>Grateful Dead</category>
             <category domain=\\"http://www.fool.com/cusips\\">MSFT</category>
-            <enclosure url=\\"https://example.com/hello-world.jpg\\" length=\\"0\\" type=\\"image/jpg\\"/>
+            <enclosure length=\\"12665\\" type=\\"image/jpeg\\" url=\\"https://example.com/hello-world.jpg\\"/>
+            <media:content url=\\"https://example.com/hello-world.jpg\\" length=\\"0\\" type=\\"image/jpg\\"/>
         </item>
         <item>
             <title><![CDATA[Hello World]]></title>
@@ -81,7 +83,7 @@ exports[`rss 2.0 should generate a valid feed with audio 1`] = `
             <author>joesmith@example.com (Joe Smith)</author>
             <category>Grateful Dead</category>
             <category domain=\\"http://www.fool.com/cusips\\">MSFT</category>
-            <enclosure length=\\"12665\\" type=\\"image/jpg\\" url=\\"https://example.com/hello-world.jpg\\"/>
+            <media:content length=\\"12665\\" type=\\"image/jpg\\" url=\\"https://example.com/hello-world.jpg\\"/>
         </item>
         <item>
             <title><![CDATA[Hello World]]></title>
@@ -144,7 +146,8 @@ exports[`rss 2.0 should generate a valid feed with enclosure 1`] = `
             <author>joesmith@example.com (Joe Smith)</author>
             <category>Grateful Dead</category>
             <category domain=\\"http://www.fool.com/cusips\\">MSFT</category>
-            <enclosure url=\\"https://example.com/hello-world.jpg\\" length=\\"0\\" type=\\"image/jpg\\"/>
+            <enclosure length=\\"12665\\" type=\\"image/jpeg\\" url=\\"https://example.com/hello-world.jpg\\"/>
+            <media:content url=\\"https://example.com/hello-world.jpg\\" length=\\"0\\" type=\\"image/jpg\\"/>
         </item>
         <item>
             <title><![CDATA[Hello World]]></title>
@@ -157,7 +160,7 @@ exports[`rss 2.0 should generate a valid feed with enclosure 1`] = `
             <author>joesmith@example.com (Joe Smith)</author>
             <category>Grateful Dead</category>
             <category domain=\\"http://www.fool.com/cusips\\">MSFT</category>
-            <enclosure length=\\"12665\\" type=\\"image/jpg\\" url=\\"https://example.com/hello-world.jpg\\"/>
+            <media:content length=\\"12665\\" type=\\"image/jpg\\" url=\\"https://example.com/hello-world.jpg\\"/>
         </item>
         <item>
             <title><![CDATA[Hello World]]></title>
@@ -207,7 +210,8 @@ exports[`rss 2.0 should generate a valid feed with image properties 1`] = `
             <author>joesmith@example.com (Joe Smith)</author>
             <category>Grateful Dead</category>
             <category domain=\\"http://www.fool.com/cusips\\">MSFT</category>
-            <enclosure url=\\"https://example.com/hello-world.jpg\\" length=\\"0\\" type=\\"image/jpg\\"/>
+            <enclosure length=\\"12665\\" type=\\"image/jpeg\\" url=\\"https://example.com/hello-world.jpg\\"/>
+            <media:content url=\\"https://example.com/hello-world.jpg\\" length=\\"0\\" type=\\"image/jpg\\"/>
         </item>
         <item>
             <title><![CDATA[Hello World]]></title>
@@ -220,7 +224,7 @@ exports[`rss 2.0 should generate a valid feed with image properties 1`] = `
             <author>joesmith@example.com (Joe Smith)</author>
             <category>Grateful Dead</category>
             <category domain=\\"http://www.fool.com/cusips\\">MSFT</category>
-            <enclosure length=\\"12665\\" type=\\"image/jpg\\" url=\\"https://example.com/hello-world.jpg\\"/>
+            <media:content length=\\"12665\\" type=\\"image/jpg\\" url=\\"https://example.com/hello-world.jpg\\"/>
         </item>
     </channel>
 </rss>"
